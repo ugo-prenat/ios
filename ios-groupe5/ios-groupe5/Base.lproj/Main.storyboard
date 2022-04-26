@@ -16,22 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liste des vidéos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MR-ab-Q0G">
-                                <rect key="frame" x="146" y="438" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Se0-fj-SF3">
+                                <rect key="frame" x="20" y="44" width="48.5" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rechercher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tUz-3R-fEo">
+                                <rect key="frame" x="82" y="52" width="250" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1098039076" green="0.1098039076" blue="0.1098039076" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="tUz-3R-fEo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="5sz-cN-UMA"/>
+                            <constraint firstItem="tUz-3R-fEo" firstAttribute="leading" secondItem="Se0-fj-SF3" secondAttribute="trailing" constant="8" symbolic="YES" id="FKF-dF-H0g"/>
+                            <constraint firstItem="Se0-fj-SF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ml9-v8-sAA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tUz-3R-fEo" secondAttribute="trailing" constant="235" id="MxM-T0-AYn"/>
+                            <constraint firstItem="Se0-fj-SF3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q61-0P-cj2"/>
+                            <constraint firstItem="Se0-fj-SF3" firstAttribute="centerY" secondItem="tUz-3R-fEo" secondAttribute="centerY" id="Uoo-07-HRp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Accueil" image="house" catalog="system" selectedImage="house.fill" id="uPF-Kf-Fkf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-243" y="110"/>
+            <point key="canvasLocation" x="-243.47826086956525" y="109.82142857142857"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eDu-ss-7Hq">
@@ -154,6 +166,9 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
