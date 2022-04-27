@@ -88,6 +88,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-eP-Qsb">
+                                <rect key="frame" x="182" y="552" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="o2Z-Er-L2e" eventType="touchUpInside" id="TxR-Qs-TCo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7fr-um-doS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,6 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUP-HU-MZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-243" y="772"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="XVw-xu-3nt">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="1M9-gX-Pfq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2A-bb-fJU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243" y="1422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cDd-b6-GAI">

@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import AVKit
 
 class MoviePageViewController: UIViewController {
 
     var movie: String = "temp"
+    
+    let videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    var playerViewController = AVPlayerViewController()
+    var playerView = AVPlayer()
     
     @IBOutlet weak var label: UILabel!
     
@@ -17,9 +22,24 @@ class MoviePageViewController: UIViewController {
         super.viewDidLoad()
 
         label.text = movie
+        
+        
     }
     
-
+    func playVideo() {
+        let url: URL = URL(string: videoUrl)!
+        playerView = AVPlayer(url: url as URL)
+        playerViewController.player = playerView
+        
+        self.present(playerViewController, animated: true) {
+            self.playerViewController.player?.play()
+        }
+    }
+    
+    @IBAction func playVideo(_ sender: Any) {
+        playVideo()
+    }
+    
     /*
     // MARK: - Navigation
 

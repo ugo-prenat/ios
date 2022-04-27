@@ -58,8 +58,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        cell.textLabel?.text = self.movies[indexPath.row].title
-        
+        cell.textLabel?.text = self.movies[indexPath.row]
         
 //        if indexPath.row % 2 == 0 {
 //            cell.backgroundColor = UIColor.lightGray
