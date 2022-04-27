@@ -11,15 +11,9 @@ class FavoriteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let defaults = UserDefaults.standard
         
-        // Get the favorites movies list
-        let favMovies = defaults.array(forKey: "movies") as? [Movie] ?? [Movie]()
-        
-        
-        let movie: Movie? = Movie(json: [
-            "title": "Vikings",
+        let rawMovie = Movie(json: [
+            "title": "TITLE 2",
             "category":"series",
             "cover":"https://occ-0-6302-56.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYVZbqz_uitE0A1OmhKLo3WWuKlxVcPkV9Iaa2jtC-3OBvD1S8h27ov27K2A5e1Gvpt8TYTMPIroq_UtCn28Ho8rIxg.webp?r=eab",
             "url":"https://file-examples.com/storage/fef12739526267ac9a2b543/2017/04/file_example_MP4_1920_18MG.mp4",
@@ -30,21 +24,24 @@ class FavoriteViewController: UIViewController {
         ])
         
         
-//        let v: [Movie] = []
-//        v.append(movie)
-//        
-//        
-//        favMovies.append(movie)
-//        print(favMovies)
+//        if var movies = UserDefaults.standard.array(forKey: "movies") {
+//            print(movies)
+//            movies.append(movie)
+//            UserDefaults.standard.set(movies as [Any], forKey: "movies")
+//            print(movies)
+//        }
         
-        //defaults.set(favMovies, forKey: "movies")
+        //GET ET SET
+        /*var loadedTasks: [[String: Any]] {
+            get {
+                return UserDefaults.standard.array(forKey: "movies") as? [Any] ?? []
+            }
+            set {
+                UserDefaults.standard.set(newValue as [Any], forKey: "movies")
+            }
+        }*/
         
-        
-        
-        
-        
-        
-        // Do any additional setup after loading the view.
+
     }
     
 

@@ -19,6 +19,7 @@ struct Movie {
     let releaseDate: Int
     let pegi: String
 //    let type: Array
+    
 }
 
 extension Movie {
