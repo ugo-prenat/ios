@@ -13,6 +13,9 @@
 		EC1B39F32818243B0045BBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B39F12818243B0045BBB2 /* Main.storyboard */; };
 		EC1B39F52818243C0045BBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1B39F42818243C0045BBB2 /* Assets.xcassets */; };
 		EC1B39F82818243C0045BBB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B39F62818243C0045BBB2 /* LaunchScreen.storyboard */; };
+		EC1B3A00281849DD0045BBB2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */; };
+		EC1B3A0228184BA50045BBB2 /* MovieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */; };
+		EC1B3A08281859BF0045BBB2 /* MoviePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		EC1B39F42818243C0045BBB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC1B39F72818243C0045BBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1B39F92818243C0045BBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtension.swift; sourceTree = "<group>"; };
+		EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				EC1B39F42818243C0045BBB2 /* Assets.xcassets */,
 				EC1B39F62818243C0045BBB2 /* LaunchScreen.storyboard */,
 				EC1B39F92818243C0045BBB2 /* Info.plist */,
+				EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */,
+				EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */,
+				EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */,
 			);
 			path = "ios-groupe5";
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1B3A08281859BF0045BBB2 /* MoviePageViewController.swift in Sources */,
+				EC1B3A00281849DD0045BBB2 /* HomeTableViewController.swift in Sources */,
 				EC1B39F02818243B0045BBB2 /* ViewController.swift in Sources */,
 				EC1B39EC2818243B0045BBB2 /* AppDelegate.swift in Sources */,
+				EC1B3A0228184BA50045BBB2 /* MovieExtension.swift in Sources */,
 				EC1B39EE2818243B0045BBB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 584FJQSAXP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-groupe5/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 584FJQSAXP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-groupe5/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
