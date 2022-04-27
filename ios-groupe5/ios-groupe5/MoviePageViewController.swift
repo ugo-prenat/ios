@@ -10,7 +10,15 @@ import AVKit
 
 class MoviePageViewController: UIViewController {
 
-    var movie: String = "temp"
+//    var movie = Movie(json: [
+//                  "title":"Vikings",
+//                  "url":"https://file-examples.com/storage/fef12739526267ac9a2b543/2017/04/file_example_MP4_1920_18MG.mp4"
+//            ])
+    
+    var movie: Movie? = Movie(json: [
+        "title":"Vikings",
+        "url":"https://file-examples.com/storage/fef12739526267ac9a2b543/2017/04/file_example_MP4_1920_18MG.mp4"
+    ])
     
     let videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
     var playerViewController = AVPlayerViewController()
@@ -21,7 +29,8 @@ class MoviePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        label.text = movie
+        label.text = movie?.title
+        print(movie)
         
         
     }

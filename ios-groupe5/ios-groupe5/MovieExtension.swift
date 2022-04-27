@@ -21,7 +21,7 @@ struct Movie {
 }
 
 extension Movie {
-    init?(json: [String: AnyObject]) {
+    init?(json: [String: Any]) {
         guard let title = json["title"] as? String,
               let category = json["category"] as? String,
               let cover = json["cover"] as? String,

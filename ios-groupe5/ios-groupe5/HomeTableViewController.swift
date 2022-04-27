@@ -58,7 +58,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        cell.textLabel?.text = self.movies[indexPath.row]
+        cell.textLabel?.text = self.movies[indexPath.row].title
         
 //        if indexPath.row % 2 == 0 {
 //            cell.backgroundColor = UIColor.lightGray
@@ -70,7 +70,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moviePage") as? MoviePageViewController {
             //vc.linkBrowser = browsers[indexPath.row]
-            vc.movie = movies[indexPath.row].title
+            vc.movie = movies[indexPath.row]
             
             present(vc, animated: true, completion: nil)
 //            navigationController?.pushViewController(vc, animated: true)
