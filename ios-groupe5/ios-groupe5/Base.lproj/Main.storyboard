@@ -104,14 +104,6 @@
             </objects>
             <point key="canvasLocation" x="-243" y="772"/>
         </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="XVw-xu-3nt">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="1M9-gX-Pfq" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n2A-bb-fJU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-243" y="1422"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cDd-b6-GAI">
             <objects>
