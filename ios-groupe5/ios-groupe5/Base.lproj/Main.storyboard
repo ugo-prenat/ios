@@ -167,14 +167,27 @@
         <!--Favoris-->
         <scene sceneID="E8w-fU-sgp">
             <objects>
-                <viewController id="Bez-NQ-Z76" sceneMemberID="viewController">
+                <viewController id="Bez-NQ-Z76" customClass="FavoriteViewController" customModule="ios_groupe5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OUJ-a6-vsk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liste des favoris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3r-sD-DP2">
-                                <rect key="frame" x="145" y="438" width="124" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5kT-Xy-CWu">
+                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="cVB-yC-8kM">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cVB-yC-8kM" id="xvE-e3-pye">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes Favoris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIO-qY-EA2">
+                                <rect key="frame" x="50" y="54" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,12 +195,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Hb-YP-8D1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5kT-Xy-CWu" firstAttribute="leading" secondItem="2Hb-YP-8D1" secondAttribute="leading" id="MFj-uU-5Ex"/>
+                            <constraint firstItem="hIO-qY-EA2" firstAttribute="top" secondItem="2Hb-YP-8D1" secondAttribute="top" constant="10" id="bPM-uU-jqa"/>
+                            <constraint firstItem="2Hb-YP-8D1" firstAttribute="bottom" secondItem="5kT-Xy-CWu" secondAttribute="bottom" id="foB-sX-cS9"/>
+                            <constraint firstItem="hIO-qY-EA2" firstAttribute="leading" secondItem="2Hb-YP-8D1" secondAttribute="leading" constant="50" id="hf7-DH-SRs"/>
+                            <constraint firstItem="5kT-Xy-CWu" firstAttribute="top" secondItem="hIO-qY-EA2" secondAttribute="top" constant="30" id="r4a-Mc-SUE"/>
+                            <constraint firstItem="2Hb-YP-8D1" firstAttribute="trailing" secondItem="5kT-Xy-CWu" secondAttribute="trailing" id="seg-Yg-yEf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoris" image="star" catalog="system" selectedImage="star.fill" id="Rly-KU-V0V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmN-Zq-zSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="110"/>
+            <point key="canvasLocation" x="434.78260869565219" y="109.82142857142857"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m0H-MS-oRx">
