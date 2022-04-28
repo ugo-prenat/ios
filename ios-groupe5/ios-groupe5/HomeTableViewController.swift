@@ -10,6 +10,8 @@ import UIKit
 class HomeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var movies:[Movie] = []
+    
+    @IBOutlet weak var searchTextFiled: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -90,6 +92,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    @IBAction func searchMovie(_ sender: Any) {
+        print(searchTextFiled.text)
     }
 }
 
