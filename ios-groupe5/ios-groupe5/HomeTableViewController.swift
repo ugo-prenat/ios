@@ -19,17 +19,24 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+
+        fetchData(query: "")
+    }
+    
+    func fetchData(query: String) {
+        
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-
-        let url = URL(string: "https://netswift.herokuapp.com")!
+        
+        let url = URL(string: "https://netswift.herokuapp.com?q=\(query)")!
+//        let url = URL(string: "http://localhost:8000")!
 
         let task = session.dataTask(with: url) { (data, response, error) in
             if error != nil {
                print(error!.localizedDescription)
            } else {
                if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) {
-                   if let items = json as? [[String: AnyObject]] {
+                   if let items = json as? [[String: Any]] {
                        
                        for item in items {
                            if let movie = Movie(json: item) {
@@ -46,9 +53,6 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
        }
        task.resume()
     }
-
-    // MARK: - Table view data source
-
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -78,11 +82,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moviePage") as? MoviePageViewController {
-            //vc.linkBrowser = browsers[indexPath.row]
-            vc.movie = movies[indexPath.row]
             
+            vc.movie = movies[indexPath.row]
             present(vc, animated: true, completion: nil)
-//            navigationController?.pushViewController(vc, animated: true)
         }
     }
 
