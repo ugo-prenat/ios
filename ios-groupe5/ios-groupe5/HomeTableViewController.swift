@@ -60,13 +60,18 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! HomeTableViewCell
         
-        //cell.textLabel?.text = self.movies[indexPath.row].title
+        cell.title.text = movies[indexPath.row].title
+        cell.releaseDate.text = String(movies[indexPath.row].releaseDate)
+        cell.pegi.text = movies[indexPath.row].pegi
+        cell.duration.text = movies[indexPath.row].duration
         
-//        if indexPath.row % 2 == 0 {
-//            cell.backgroundColor = UIColor.lightGray
-//        }
+        // Download and display image cover
+        let url = URL(string: movies[indexPath.row].cover)!
+        if let data = try? Data(contentsOf: url) {
+            cell.cover.image = UIImage(data: data)
+        }
 
         return cell
     }
@@ -81,6 +86,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
 
 

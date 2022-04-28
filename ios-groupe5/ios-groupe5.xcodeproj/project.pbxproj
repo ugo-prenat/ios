@@ -16,6 +16,7 @@
 		EC1B3A00281849DD0045BBB2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */; };
 		EC1B3A0228184BA50045BBB2 /* MovieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */; };
 		EC1B3A08281859BF0045BBB2 /* MoviePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */; };
+		ECA943D5281A8181004C9521 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA943D4281A8181004C9521 /* HomeTableViewCell.swift */; };
 		ECCC9B8B281943550045801C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC9B8A281943550045801C /* FavoriteViewController.swift */; };
 		ECCC9B8D281943670045801C /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtension.swift; sourceTree = "<group>"; };
 		EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePageViewController.swift; sourceTree = "<group>"; };
+		ECA943D4281A8181004C9521 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		ECCC9B8A281943550045801C /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */,
 				ECCC9B8A281943550045801C /* FavoriteViewController.swift */,
 				ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */,
+				ECA943D4281A8181004C9521 /* HomeTableViewCell.swift */,
 			);
 			path = "ios-groupe5";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				EC1B39F02818243B0045BBB2 /* ViewController.swift in Sources */,
 				ECCC9B8B281943550045801C /* FavoriteViewController.swift in Sources */,
 				EC1B39EC2818243B0045BBB2 /* AppDelegate.swift in Sources */,
+				ECA943D5281A8181004C9521 /* HomeTableViewCell.swift in Sources */,
 				EC1B3A0228184BA50045BBB2 /* MovieExtension.swift in Sources */,
 				EC1B39EE2818243B0045BBB2 /* SceneDelegate.swift in Sources */,
 			);
