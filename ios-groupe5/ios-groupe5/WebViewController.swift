@@ -36,4 +36,8 @@ class WebViewController: UIViewController {
             let request = URLRequest(url: url)
             self.webView.load(request)
         }
+
+    @IBAction func closeTrailer(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
