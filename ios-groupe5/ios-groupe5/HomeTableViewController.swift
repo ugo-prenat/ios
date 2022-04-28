@@ -93,8 +93,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    @IBAction func searchMovie(_ sender: Any) {
-        print(searchTextFiled.text)
+    @IBAction func searchQuery(_ sender: Any) {
+        let search = searchTextFiled.text
+        print(search!)
     }
 }
 
