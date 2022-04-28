@@ -25,12 +25,17 @@ class MoviePageViewController: UIViewController {
     var playerView = AVPlayer()
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var pegi: UILabel!
+    @IBOutlet weak var duree: UILabel!
+    @IBOutlet weak var desc: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         label.text = movie?.title
-        
+        pegi.text = movie?.pegi
+        duree.text = movie?.duration
+        desc.text = movie?.description
     }
     
     func playVideo() {
