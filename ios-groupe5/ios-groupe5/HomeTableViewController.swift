@@ -11,7 +11,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     var movies:[Movie] = []
     
-    @IBOutlet weak var searchTextFiled: UITextField!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -93,10 +93,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    @IBAction func searchQuery(_ sender: Any) {
-        let search = searchTextFiled.text
-        print(search!)
+    @IBAction func searchMovie(_ sender: Any) {
+        let query = searchTextField.text
+        fetchData(query: query!)
     }
 }
-
 
