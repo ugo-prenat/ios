@@ -19,7 +19,7 @@ class FavoriteViewController: UIViewController {
             "url":"https://file-examples.com/storage/fef12739526267ac9a2b543/2017/04/file_example_MP4_1920_18MG.mp4",
             "duration":"45min",
             "description":"Cette série réaliste s'attache aux exploits du héros Ragnar Lothbrok qui ambitionne d'étendre le pouvoir viking à la faveur d'un chef manquant de vision politique.",
-            "releaseDate":2019,
+            "releaseDate":"2019",
             "pegi":"16+"
         ])
         

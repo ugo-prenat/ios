@@ -18,8 +18,6 @@ struct Movie {
     let description: String
     let releaseDate: Int
     let pegi: String
-//    let type: Array
-    
 }
 
 extension Movie {
@@ -33,7 +31,6 @@ extension Movie {
               let description = json["description"] as? String,
               let releaseDate = json["releaseDate"] as? Int,
               let pegi = json["pegi"] as? String
-//              let type = json["type"] as? Array
         else {
             return nil
         }
@@ -47,6 +44,5 @@ extension Movie {
         self.description = description
         self.releaseDate = releaseDate
         self.pegi = pegi
-//        self.type = type
     }
 }
