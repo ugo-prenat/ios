@@ -16,24 +16,22 @@ struct Movie {
     let trailerUrl: String
     let duration: String
     let description: String
-    let releaseDate: Int
+    let releaseDate: String
     let pegi: String
-//    let type: Array
     
 }
 
 extension Movie {
-    init?(json: [String: Any]) {
-        guard let title = json["title"] as? String,
-              let category = json["category"] as? String,
-              let cover = json["cover"] as? String,
-              let url = json["url"] as? String,
-              let trailerUrl = json["trailerUrl"] as? String,
-              let duration = json["duration"] as? String,
-              let description = json["description"] as? String,
-              let releaseDate = json["releaseDate"] as? Int,
-              let pegi = json["pegi"] as? String
-//              let type = json["type"] as? Array
+    init?(json: [String: String]) {
+        guard let title = json["title"],
+              let category = json["category"],
+              let cover = json["cover"],
+              let url = json["url"],
+              let trailerUrl = json["trailerUrl"],
+              let duration = json["duration"],
+              let description = json["description"],
+              let releaseDate = json["releaseDate"],
+              let pegi = json["pegi"]
         else {
             return nil
         }
@@ -47,6 +45,5 @@ extension Movie {
         self.description = description
         self.releaseDate = releaseDate
         self.pegi = pegi
-//        self.type = type
     }
 }

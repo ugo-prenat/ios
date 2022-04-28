@@ -12,7 +12,6 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     var movies:[Movie] = []
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +21,15 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
 
-        let url = URL(string: "https://netswift.herokuapp.com")!
+//        let url = URL(string: "https://netswift.herokuapp.com")!
+        let url = URL(string: "http://localhost:8000")!
 
         let task = session.dataTask(with: url) { (data, response, error) in
             if error != nil {
                print(error!.localizedDescription)
            } else {
                if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) {
-                   if let items = json as? [[String: AnyObject]] {
+                   if let items = json as? [[String: String]] {
                        
                        for item in items {
                            if let movie = Movie(json: item) {
@@ -47,8 +47,6 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
        task.resume()
     }
 
-    // MARK: - Table view data source
-
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,27 +58,38 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! HomeCustomTableViewCell
         
-        //cell.textLabel?.text = self.movies[indexPath.row].title
+        cell.title.text = movies[indexPath.row].title
+        cell.releaseDate.text = String(movies[indexPath.row].releaseDate)
+        cell.pegi.text = movies[indexPath.row].pegi
+        cell.duration.text = movies[indexPath.row].duration
         
-//        if indexPath.row % 2 == 0 {
-//            cell.backgroundColor = UIColor.lightGray
-//        }
-
+        // Download and display the image cover
+        let url = URL(string: movies[indexPath.row].cover)!
+        if let data = try? Data(contentsOf: url) {
+            cell.cover.image = UIImage(data: data)
+           }
+        
+        // Don't change cell's background color
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moviePage") as? MoviePageViewController {
-            //vc.linkBrowser = browsers[indexPath.row]
-            vc.movie = movies[indexPath.row]
             
+            vc.movie = movies[indexPath.row]
             present(vc, animated: true, completion: nil)
-//            navigationController?.pushViewController(vc, animated: true)
         }
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    @IBAction func searchMovie(_ sender: Any) {
+        print("in")
+    }
 }
-
-
