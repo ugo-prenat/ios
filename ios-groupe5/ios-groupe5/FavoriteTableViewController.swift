@@ -8,7 +8,9 @@
 import UIKit
 
 class FavoriteTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     let movie1: Movie = Movie(json: [
           "title":"Vikings",
           "category":"series",
@@ -59,16 +61,15 @@ class FavoriteTableViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
+
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         // Creating fav list
         favMovies.append(movie1)
         favMovies.append(movie2)
         favMovies.append(movie3)
         favMovies.append(movie4)
-        
     }
 
 
@@ -78,14 +79,15 @@ class FavoriteTableViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        print(favMovies.count)
         return self.favMovies.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! FavoriteTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteReuseIdentifier", for: indexPath) as! FavoriteTableViewCell
 
+        cell.title.text = favMovies[indexPath.row].title
         
 
         return cell

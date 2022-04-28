@@ -28,6 +28,9 @@ class MoviePageViewController: UIViewController {
     @IBOutlet weak var pegi: UILabel!
     @IBOutlet weak var duree: UILabel!
     @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var cover: UIImageView!
+    @IBOutlet weak var releaseDate: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,13 @@ class MoviePageViewController: UIViewController {
         pegi.text = movie?.pegi
         duree.text = movie?.duration
         desc.text = movie?.description
+        
+        // Download and display image cover
+        let coverUrl: String = movie?.cover as! String
+        let url = URL(string: coverUrl)!
+        if let data = try? Data(contentsOf: url) {
+            cover.image = UIImage(data: data)
+        }
     }
     
     func playVideo() {
@@ -60,23 +70,13 @@ class MoviePageViewController: UIViewController {
                 vc.trailerUrl = trailerUrl
                 self.present(vc, animated: true, completion: nil)
             }
-            
-            
         }
     }
+   
     
-            
-        
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func playMovie(_ sender: Any) {
+        playVideo()
     }
-    */
-
 }
+
+
