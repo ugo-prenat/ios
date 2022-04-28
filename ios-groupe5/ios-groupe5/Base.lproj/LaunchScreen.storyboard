@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NetSwift" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNS-PP-oGC">
-                                <rect key="frame" x="120" y="526" width="174" height="76"/>
+                                <rect key="frame" x="80" y="526" width="254" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="xcm-WA-ybK"/>
                                 </constraints>
@@ -33,8 +33,8 @@
                         <constraints>
                             <constraint firstItem="HPU-fm-pHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="3Ey-ih-zfy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HPU-fm-pHK" secondAttribute="trailing" constant="69" id="8sH-0s-zFG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sNS-PP-oGC" secondAttribute="trailing" constant="120" id="EbP-sJ-PSo"/>
-                            <constraint firstItem="sNS-PP-oGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="GUb-D3-ja8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sNS-PP-oGC" secondAttribute="trailing" constant="80" id="EbP-sJ-PSo"/>
+                            <constraint firstItem="sNS-PP-oGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="GUb-D3-ja8"/>
                             <constraint firstItem="HPU-fm-pHK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q8d-nF-pbN"/>
                             <constraint firstItem="sNS-PP-oGC" firstAttribute="top" secondItem="HPU-fm-pHK" secondAttribute="bottom" constant="20" id="UxR-c1-4gP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sNS-PP-oGC" secondAttribute="bottom" constant="260" id="f0L-IS-JPG"/>
