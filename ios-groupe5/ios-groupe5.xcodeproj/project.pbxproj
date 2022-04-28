@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAB3BDB6281977E300EEFDD1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3BDB5281977E300EEFDD1 /* WebViewController.swift */; };
 		EC1B39EC2818243B0045BBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B39EB2818243B0045BBB2 /* AppDelegate.swift */; };
 		EC1B39EE2818243B0045BBB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B39ED2818243B0045BBB2 /* SceneDelegate.swift */; };
 		EC1B39F02818243B0045BBB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B39EF2818243B0045BBB2 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CAB3BDB5281977E300EEFDD1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EC1B39E82818243B0045BBB2 /* ios-groupe5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-groupe5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1B39EB2818243B0045BBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1B39ED2818243B0045BBB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */,
 				EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */,
 				ECCC9B8A281943550045801C /* FavoriteViewController.swift */,
+				CAB3BDB5281977E300EEFDD1 /* WebViewController.swift */,
 				ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */,
 			);
 			path = "ios-groupe5";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1B3A08281859BF0045BBB2 /* MoviePageViewController.swift in Sources */,
+				CAB3BDB6281977E300EEFDD1 /* WebViewController.swift in Sources */,
 				ECCC9B8D281943670045801C /* FavoriteTableViewController.swift in Sources */,
 				EC1B3A00281849DD0045BBB2 /* HomeTableViewController.swift in Sources */,
 				EC1B39F02818243B0045BBB2 /* ViewController.swift in Sources */,

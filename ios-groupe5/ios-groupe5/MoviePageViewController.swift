@@ -23,13 +23,22 @@ class MoviePageViewController: UIViewController {
     
     var playerViewController = AVPlayerViewController()
     var playerView = AVPlayer()
+    //var movie: String = "temp"
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var pegi: UILabel!
+    @IBOutlet weak var duree: UILabel!
+    @IBOutlet weak var date: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        label.text = movie?.title
+    label.text = movie?.title
+    desc.text = movie?.description
+    pegi.text = movie?.pegi
+    duree.text = movie?.duration
+    date.text = movie?.releaseDate
         
     }
     
@@ -45,7 +54,20 @@ class MoviePageViewController: UIViewController {
                 self.playerViewController.player?.play()
             }
         }
-        
+    }
+    
+       // label.text = movie
+    
+    @IBAction func showWebView(_ sender: Any) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "webview") as? WebViewController {
+            
+            if let trailerUrl: String = movie?.trailerUrl {
+                vc.trailerUrl = trailerUrl
+                self.present(vc, animated: true, completion: nil)
+            }
+            
+            
+        }
     }
     
     
@@ -60,3 +82,4 @@ class MoviePageViewController: UIViewController {
     */
 
 }
+
