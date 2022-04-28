@@ -60,7 +60,6 @@ class MoviePageViewController: UIViewController {
                 self.playerViewController.player?.play()
             }
         }
-        
     }
     
     @IBAction func showWebView(_ sender: Any) {
@@ -72,7 +71,6 @@ class MoviePageViewController: UIViewController {
             }
         }
     }
-   
     
     @IBAction func playMovie(_ sender: Any) {
         playVideo()
