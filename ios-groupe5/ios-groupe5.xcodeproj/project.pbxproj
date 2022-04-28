@@ -16,9 +16,8 @@
 		EC1B3A00281849DD0045BBB2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */; };
 		EC1B3A0228184BA50045BBB2 /* MovieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */; };
 		EC1B3A08281859BF0045BBB2 /* MoviePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */; };
-		ECA943C428197540004C9521 /* HomeCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA943C328197540004C9521 /* HomeCustomTableViewCell.swift */; };
-		ECA943D12819D9E7004C9521 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA943D02819D9E7004C9521 /* FavoriteViewController.swift */; };
-		ECA943D32819DA4D004C9521 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA943D22819DA4D004C9521 /* FavoriteTableViewCell.swift */; };
+		ECCC9B8B281943550045801C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC9B8A281943550045801C /* FavoriteViewController.swift */; };
+		ECCC9B8D281943670045801C /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +32,8 @@
 		EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtension.swift; sourceTree = "<group>"; };
 		EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePageViewController.swift; sourceTree = "<group>"; };
-		ECA943C328197540004C9521 /* HomeCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomTableViewCell.swift; sourceTree = "<group>"; };
-		ECA943D02819D9E7004C9521 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		ECA943D22819DA4D004C9521 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		ECCC9B8A281943550045801C /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,61 +66,20 @@
 		EC1B39EA2818243B0045BBB2 /* ios-groupe5 */ = {
 			isa = PBXGroup;
 			children = (
-				ECA943C62819AE76004C9521 /* Controllers */,
-				ECA943C52819AC5E004C9521 /* Extensions */,
-				EC1B39ED2818243B0045BBB2 /* SceneDelegate.swift */,
 				EC1B39EB2818243B0045BBB2 /* AppDelegate.swift */,
+				EC1B39ED2818243B0045BBB2 /* SceneDelegate.swift */,
+				EC1B39EF2818243B0045BBB2 /* ViewController.swift */,
 				EC1B39F12818243B0045BBB2 /* Main.storyboard */,
 				EC1B39F42818243C0045BBB2 /* Assets.xcassets */,
 				EC1B39F62818243C0045BBB2 /* LaunchScreen.storyboard */,
 				EC1B39F92818243C0045BBB2 /* Info.plist */,
+				EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */,
+				EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */,
+				EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */,
+				ECCC9B8A281943550045801C /* FavoriteViewController.swift */,
+				ECCC9B8C281943670045801C /* FavoriteTableViewController.swift */,
 			);
 			path = "ios-groupe5";
-			sourceTree = "<group>";
-		};
-		ECA943C52819AC5E004C9521 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EC1B3A0128184BA50045BBB2 /* MovieExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		ECA943C62819AE76004C9521 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				ECA943C92819AF78004C9521 /* Movie */,
-				ECA943C82819AF4F004C9521 /* Home */,
-				ECA943C72819AF44004C9521 /* Favorite */,
-				EC1B39EF2818243B0045BBB2 /* ViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		ECA943C72819AF44004C9521 /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				ECA943D02819D9E7004C9521 /* FavoriteViewController.swift */,
-				ECA943D22819DA4D004C9521 /* FavoriteTableViewCell.swift */,
-			);
-			path = Favorite;
-			sourceTree = "<group>";
-		};
-		ECA943C82819AF4F004C9521 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				EC1B39FF281849DD0045BBB2 /* HomeTableViewController.swift */,
-				ECA943C328197540004C9521 /* HomeCustomTableViewCell.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		ECA943C92819AF78004C9521 /* Movie */ = {
-			isa = PBXGroup;
-			children = (
-				EC1B3A07281859BF0045BBB2 /* MoviePageViewController.swift */,
-			);
-			path = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,14 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA943C428197540004C9521 /* HomeCustomTableViewCell.swift in Sources */,
 				EC1B3A08281859BF0045BBB2 /* MoviePageViewController.swift in Sources */,
+				ECCC9B8D281943670045801C /* FavoriteTableViewController.swift in Sources */,
 				EC1B3A00281849DD0045BBB2 /* HomeTableViewController.swift in Sources */,
 				EC1B39F02818243B0045BBB2 /* ViewController.swift in Sources */,
-				ECA943D32819DA4D004C9521 /* FavoriteTableViewCell.swift in Sources */,
+				ECCC9B8B281943550045801C /* FavoriteViewController.swift in Sources */,
 				EC1B39EC2818243B0045BBB2 /* AppDelegate.swift in Sources */,
 				EC1B3A0228184BA50045BBB2 /* MovieExtension.swift in Sources */,
-				ECA943D12819D9E7004C9521 /* FavoriteViewController.swift in Sources */,
 				EC1B39EE2818243B0045BBB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
