@@ -25,7 +25,13 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         fetchData(query: "")
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     func fetchData(query: String) {
+        
+        self.movies = []
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
@@ -42,6 +48,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
                        
                        for item in items {
                            if let movie = Movie(json: item) {
+//                               print(movie.title)
                                self.movies.append(movie)
                            }
                        }
