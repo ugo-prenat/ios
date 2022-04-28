@@ -30,7 +30,8 @@ class MoviePageViewController: UIViewController {
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var cover: UIImageView!
     @IBOutlet weak var releaseDate: UILabel!
-    
+    @IBOutlet weak var shareImageButton: UIImageView!
+    @IBOutlet weak var playMoovieImageButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,16 @@ class MoviePageViewController: UIViewController {
         pegi.text = movie?.pegi
         duree.text = movie?.duration
         desc.text = movie?.description
+        //releaseDate.text = movie?.releaseDate
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            shareImageButton.isUserInteractionEnabled = true
+            shareImageButton.addGestureRecognizer(tapGestureRecognizer)
+        
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped2(tapGestureRecognizer:)))
+            playMoovieImageButton.isUserInteractionEnabled = true
+            playMoovieImageButton.addGestureRecognizer(tapGestureRecognizer2)
+        
         
         // Download and display image cover
         let coverUrl: String = movie?.cover as! String
@@ -46,6 +57,23 @@ class MoviePageViewController: UIViewController {
         if let data = try? Data(contentsOf: url) {
             cover.image = UIImage(data: data)
         }
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        // Your action
+        
+        let text = "Hey, as-tu regarder \(movie?.title ?? "") sur NetSwift ?\r \rTiens voici un lien pour y accéder directement ! \r \r\(movie?.url ?? "")"
+        let activityViewController = UIActivityViewController.init(activityItems:[text], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @objc func imageTapped2(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        playVideo()
     }
     
     func playVideo() {
@@ -72,9 +100,7 @@ class MoviePageViewController: UIViewController {
         }
     }
     
-    @IBAction func playMovie(_ sender: Any) {
-        playVideo()
-    }
+
 }
 
 
