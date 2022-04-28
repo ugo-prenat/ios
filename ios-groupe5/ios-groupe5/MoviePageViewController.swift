@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AVKit
+import AVKit  
 
 class MoviePageViewController: UIViewController {
     
@@ -47,6 +47,21 @@ class MoviePageViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func showWebView(_ sender: Any) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "webview") as? WebViewController {
+            
+            if let trailerUrl: String = movie?.trailerUrl {
+                vc.trailerUrl = trailerUrl
+                self.present(vc, animated: true, completion: nil)
+            }
+            
+            
+        }
+    }
+    
+            
+        
     
     
     /*
