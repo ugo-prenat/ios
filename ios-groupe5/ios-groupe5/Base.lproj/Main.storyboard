@@ -195,10 +195,24 @@
                                 <rect key="frame" x="147" y="119" width="121" height="99.999999999999986"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hng-Ys-ABH">
+                                <rect key="frame" x="10" y="501.00000000000006" width="47" height="30.666666666666686"/>
+                                <color key="backgroundColor" red="0.11372549830000001" green="0.11372549830000001" blue="0.11372549830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.78039217000000005" green="0.1725490093" blue="0.11372549830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="star" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
+                                    <color key="baseForegroundColor" red="0.78039217000000005" green="0.1725490093" blue="0.11372549830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toggleFav:" destination="o2Z-Er-L2e" eventType="touchUpInside" id="A1q-K6-6kk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7fr-um-doS"/>
                         <color key="backgroundColor" red="0.11372549830000001" green="0.11372549830000001" blue="0.11372549830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="hng-Ys-ABH" firstAttribute="leading" secondItem="7fr-um-doS" secondAttribute="leading" constant="10" id="1uQ-il-eed"/>
                             <constraint firstItem="hKh-kr-y8k" firstAttribute="top" secondItem="g1M-pW-9wb" secondAttribute="bottom" constant="10" id="4VT-Mx-1L4"/>
                             <constraint firstItem="sUE-mK-wbh" firstAttribute="top" secondItem="O24-Hp-6Zh" secondAttribute="bottom" constant="-175.33333333333354" id="4eM-HI-n8P"/>
                             <constraint firstItem="7fr-um-doS" firstAttribute="trailing" secondItem="XEe-4T-arQ" secondAttribute="trailing" constant="15" id="5Vk-g3-aS2"/>
@@ -220,6 +234,7 @@
                             <constraint firstItem="9rB-HW-xbn" firstAttribute="leading" secondItem="7fr-um-doS" secondAttribute="leading" constant="20" id="bEz-wW-rHl"/>
                             <constraint firstItem="kxK-Wh-gxF" firstAttribute="top" secondItem="g1M-pW-9wb" secondAttribute="bottom" constant="10" id="eDK-Wy-9Yz"/>
                             <constraint firstItem="O24-Hp-6Zh" firstAttribute="width" secondItem="w0o-Q5-XtX" secondAttribute="width" multiplier="0.28271" id="fA7-Et-Tmj"/>
+                            <constraint firstItem="hng-Ys-ABH" firstAttribute="top" secondItem="9rB-HW-xbn" secondAttribute="bottom" constant="50" id="fOa-1r-vTx"/>
                             <constraint firstItem="WZo-wY-Lig" firstAttribute="leading" secondItem="kxK-Wh-gxF" secondAttribute="trailing" constant="25" id="n7f-wS-Tml"/>
                             <constraint firstItem="XEe-4T-arQ" firstAttribute="top" secondItem="j13-aL-XuH" secondAttribute="bottom" constant="9.0000000000001137" id="nMV-u4-uUi"/>
                             <constraint firstItem="kxK-Wh-gxF" firstAttribute="leading" secondItem="7fr-um-doS" secondAttribute="leading" constant="20" id="slF-85-LNV"/>
@@ -231,6 +246,7 @@
                         <outlet property="cover" destination="sUE-mK-wbh" id="tM6-wp-HdO"/>
                         <outlet property="desc" destination="9rB-HW-xbn" id="SxX-at-ehP"/>
                         <outlet property="duree" destination="WZo-wY-Lig" id="XnV-tC-6KJ"/>
+                        <outlet property="favBtn" destination="hng-Ys-ABH" id="Non-PC-1j3"/>
                         <outlet property="label" destination="g1M-pW-9wb" id="wrw-0n-Est"/>
                         <outlet property="pegi" destination="kxK-Wh-gxF" id="zws-Ur-LRH"/>
                         <outlet property="playMoovieImageButton" destination="O24-Hp-6Zh" id="jZM-Oa-pb5"/>

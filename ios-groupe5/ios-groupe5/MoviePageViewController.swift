@@ -32,6 +32,7 @@ class MoviePageViewController: UIViewController {
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var shareImageButton: UIImageView!
     @IBOutlet weak var playMoovieImageButton: UIImageView!
+    @IBOutlet weak var favBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +101,14 @@ class MoviePageViewController: UIViewController {
         }
     }
     
-
+    @IBAction func toggleFav(_ sender: Any) {
+        
+        if favBtn.isSelected {
+            favBtn.setImage(UIImage(systemName: "star"), for: .normal)
+            favBtn.isSelected = false
+        } else {
+            favBtn.isSelected = true
+            favBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }
+    }
 }
-
-
