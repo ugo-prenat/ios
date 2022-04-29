@@ -35,7 +35,7 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        
+    
         let url = URL(string: "https://netswift.herokuapp.com?q=\(query)")!
 //        let url = URL(string: "http://localhost:8000")!
 
@@ -48,11 +48,9 @@ class HomeTableViewController: UIViewController, UITableViewDataSource, UITableV
                        
                        for item in items {
                            if let movie = Movie(json: item) {
-//                               print(movie.title)
                                self.movies.append(movie)
                            }
                        }
-                       
                    }
                }
            }
